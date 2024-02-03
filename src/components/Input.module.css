@@ -1,0 +1,32 @@
+.form_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input label {
+    margin-left: 2px;
+}
+
+.form_input input {
+    padding: 0.7em;
+    border-radius: 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.form_input input::placeholder{
+    color: #7b7b7b;
+}
+
+/* .form input:not(input[type=submit]) {
+    margin-left: 20%;
+}
+.form label{
+    margin-left: 20%;
+}
+
+.form input[type=submit] {
+    width: 44px;
+    height: 44px;
+    margin-left: 2px;
+} */

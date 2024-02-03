@@ -28,7 +28,7 @@
   background-size: cover;
 }
 
-p {
+.label-logo {
   width: fit-content;
   margin-top: 2%;
   font-size: 1.5rem;
