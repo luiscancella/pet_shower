@@ -42,12 +42,13 @@
     margin: auto 0px auto auto;
     border: none;
     background-color: #60C6F1;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
     outline: revert;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #000;
 }
 
 .form button img {

@@ -1,8 +1,10 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 header('Content-Type: application/json');
+
+
 // Verifica se a requisição foi feita usando o método POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Obtém os dados do corpo da requisição POST

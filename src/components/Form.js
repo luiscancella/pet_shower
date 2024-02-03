@@ -22,19 +22,22 @@ function Form({handleSubmit}){
             <form onSubmit={submit} className={style.form}>
                 <div className={style.input_group}>
                     <Input
+                    type='text'
                     name='date'
                     text='Data:'
                     placeholder='Exemplo: 10/06/2024'
                     handleOnChange={handleChange}
                     />
                     <Input
-                    name='caes_p'
+                    type='number'
+                    name='dog_small'
                     text='Cães Pequenos:'
                     placeholder='Exemplo: 3'
                     handleOnChange={handleChange}
                     />
                     <Input
-                    name='caes_g'
+                    type='number'
+                    name='dog_big'
                     text='Cães Grandes:'
                     placeholder='Exemplo: 1'
                     handleOnChange={handleChange}
