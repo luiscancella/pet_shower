@@ -23,9 +23,16 @@ $petShops = [$canino_feliz, $vai_rex, $chowchawgas];
 $rawData = file_get_contents("php://input");
 $data = json_decode($rawData, true);
 
-# Tratamentos de erros - - - - - -> implementar <-
+# Tratamentos de erros
 $response['error'] = false;
-$response['error_date'] = false;
+$response['error_date'] = !(dateIsValid($data['date']));
+$response['error_dog_small'] = !(is_numeric($data['dog_small']));
+$response['error_dog_big'] = !(is_numeric($data['dog_big']));
+
+if($response['error_date'] || $response['error_dog_small'] || $response['error_dog_big']){
+    $response['error'] = true;
+    die(json_encode($response));
+}
 
 # Calculate price by day
 if(isWeekend($data['date'])){
@@ -51,8 +58,8 @@ usort($petShops, 'comparePetShops');
 $response['petshops'] = array();
 
 foreach ($petShops as $petShop) {
-    $tmp = json_encode(["name" => $petShop->getName(), "price" => $petShop->getTotalPrice(), "distance" => $petShop->getDistance()]);
+    $tmp = ["name" => $petShop->getName(), "price" => $petShop->getTotalPrice(), "distance" => $petShop->getDistance()];
     array_push($response['petshops'], $tmp);
 }
 
-echo(json_encode($response));
+die(json_encode($response));

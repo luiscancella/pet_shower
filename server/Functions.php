@@ -20,3 +20,11 @@ function comparePetShops($a, $b) {
         return $priceComparison;
     }
 }
+
+# Check date is valid
+function dateIsValid($date_string){
+    $format = 'd/m/Y';
+    $date = DateTime::createFromFormat($format, $date_string);
+
+    return ($date && $date->format($format) === $date_string);
+}

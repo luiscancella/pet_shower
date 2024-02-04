@@ -1,6 +1,6 @@
 import style from './Form.module.css';
-import Input from './Input';
-import lupa from '../assets/lupa.png';
+import Input from '../Input/Input';
+import lupa from '../../assets/lupa.png';
 import { useState } from 'react';
 
 
@@ -29,14 +29,14 @@ function Form({handleSubmit}){
                     handleOnChange={handleChange}
                     />
                     <Input
-                    type='number'
+                    type='text'
                     name='dog_small'
                     text='Cães Pequenos:'
                     placeholder='Exemplo: 3'
                     handleOnChange={handleChange}
                     />
                     <Input
-                    type='number'
+                    type='text'
                     name='dog_big'
                     text='Cães Grandes:'
                     placeholder='Exemplo: 1'
