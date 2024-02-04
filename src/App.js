@@ -21,7 +21,7 @@ function App() {
     setModalOpen(!isModalOpen);
     if(Object.keys(query).length === 0) return;
     setModalBody(<p>Consultando...</p>);
-    fetch('http://localhost:5050/server/Calculator.php', {
+    fetch('http://localhost:5050/server/api.php', {
       method: 'POST',
       Headers: {
         'Content-type': 'application/json'
@@ -47,6 +47,7 @@ function App() {
         setModalBody(<ul style={{color: 'red'}}>{aux.map((msg) => <li><p>{msg} </p></li>)}</ul>)
       }
     })
+    .catch((error) => console.log(error));
   }
   
   return (
