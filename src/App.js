@@ -30,6 +30,7 @@ function App() {
     })
     .then((resp) => resp.json())
     .then((data) => {
+      console.log(data);
       count = 1;
       if(!data['error']){
         setModalBody(<div>{
@@ -43,7 +44,7 @@ function App() {
         if (data['error_dog_small']) aux.push('Campo de cachorro pequeno deve ser número!');
         if (data['error_dog_big']) aux.push('Campo de cachorro pequeno deve ser número!');
         console.log(aux);
-        setModalBody(<ul style={{color: 'red'}}>{aux.map((msg) => <li><p key={msg}>{msg} </p></li>)}</ul>)
+        setModalBody(<ul style={{color: 'red'}}>{aux.map((msg) => <li><p>{msg} </p></li>)}</ul>)
       }
     })
   }

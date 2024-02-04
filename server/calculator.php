@@ -23,7 +23,7 @@ $petShops = [$canino_feliz, $vai_rex, $chowchawgas];
 $rawData = file_get_contents("php://input");
 $data = json_decode($rawData, true);
 
-# Tratamentos de erros
+# Error handling
 $response['error'] = false;
 $response['error_date'] = !(dateIsValid($data['date']));
 $response['error_dog_small'] = !(is_numeric($data['dog_small']));

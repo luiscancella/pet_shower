@@ -4,21 +4,16 @@ function isWeekend($date_string){
     $timestamp = DateTime::createFromFormat('d/m/Y', $date_string);
     $dayofweek = (int)$timestamp->format('w');
     
-    if ($dayofweek == 0 || $dayofweek == 6) {
-        return true;
-    }
-    return false;
+    return ($dayofweek == 0 || $dayofweek == 6);
 }
 
 # Compare PetShop by total order value and distance
 function comparePetShops($a, $b) {
     $priceComparison = $a->getTotalPrice() - $b->getTotalPrice();
+    
+    if ($priceComparison == 0) return $a->getDistance() - $b->getDistance();
 
-    if ($priceComparison === 0) {
-        return $a->getDistance() - $b->getDistance();
-    } else {
-        return $priceComparison;
-    }
+    return $priceComparison;
 }
 
 # Check date is valid
