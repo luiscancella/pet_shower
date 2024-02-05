@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Pet Shower
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Premissas
 
-## Available Scripts
+Foi adotado como objetivo o desenvolvimento de um site para calcular a escolha mais eficiente entre três petshops em um bairro para dar banho em um cachorro. O design do site é simples e eficiente, com poucos campos para preenchimento, visando simplicidade e objetividade. O aplicativo web não é responsivo e não foi projetado para uso em dispositivos móveis, considerando que não há expectativas de um grande número de usuários.
 
-In the project directory, you can run:
+No desenvolvimento, optou-se por uma abordagem de código simples e iterativo na implementação dos petshops, permitindo fácil integração de mais petshops, se necessário. Por não prever um grande volume de usúario, não foram utilizadas arquiteturas de escalabilidade.
 
-### `npm start`
+Essas decisões foram tomadas para atender às necessidades específicas do projeto, proporcionando uma experiência direta ao usuário e facilitando a manutenção e evolução do aplicativo conforme necessário.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalação e execução
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pré-requisitos
 
-### `npm test`
+Certifique-se de ter os seguintes componentes instalados em sua máquina:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js / npm](https://nodejs.org/)
 
-### `npm run build`
+- [PHP](https://www.php.net/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Foram testado apenas nessas versões, podendo não funcionar em outras:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node : 20.11.0
+- npm: 10.2.4
+- PHP : 8.3.0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Instalação
 
-### `npm run eject`
+Navegue até o diretório do frontend e instale as depências do projeto:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+cd frontend
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Execução
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Frontend (React)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+No diretório **frontend**, para executar o aplicativo React no modo desenvolvimento digite o comando:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ele irá abrir na porta 3000 e poderá ser acessado pelo link [http://localhost:3000](http://localhost:3000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Backend (PHP)
 
-### Code Splitting
+No diretório **backend**, execute o servidor PHP em modo desenvolvimento com o comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+php -S localhost:8000
+```
 
-### Analyzing the Bundle Size
+O backend estará respondendo requisições em [http://localhost:8000](http://localhost:8000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Decisões de projeto
 
-### Making a Progressive Web App
+No desenvolvimento, algumas decisões foram tomadas para escolher as tecnologias e abordagens adequadas. Aqui estão algumas das decisões mais importantes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Ferramentas
 
-### Advanced Configuration
+#### React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+A escolha do React como a base do frontend foi feita com base na familiaridade e na eficiência que essas tecnologias proporcionam, além de proporcionar fácil entedibilidade dos códigos, tornando um projeto com fácil manutenção.
 
-### Deployment
+#### PHP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+A escolha do PHP deve a rapidez e facilidade no desenvolvimento, já que é uma linguagem simples de escrever e entender, além de, por ser uma linguagem com muitos anos de existência, existem diversas documentações e suporte disponiveis.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Além disso é uma ferramenta muito estável e possui compatibilidade com outras tecnologias web, como HTML, CSS e JavaScript, facilitando a criação de aplicações web.
